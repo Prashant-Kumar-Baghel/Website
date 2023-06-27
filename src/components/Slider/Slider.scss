@@ -1,0 +1,38 @@
+ .slider{
+    height: calc(100vh - 80px);
+    width: 100vw;
+    position: relative;
+    overflow: hidden;//because slider par 3 pictures hai and jab hum right mai slide kate hai to overflow ho jata hai
+    .container{
+        width: 300vw;//we take 300vw to create slide because we have three image. 
+        display: flex;
+        height: 100%;
+        transition: all 1s ease;//All mean All properties that can transition will.
+        img{
+            width: 100vw;
+            height: 100%;//we take img height as 100% hence we also make parent(container) height 100%. 
+            object-fit: cover;
+             
+        }
+
+    }
+    .icons{
+        width: fit-content;
+        position:absolute;
+        margin:auto;//When you set margin: auto; on an element, it horizontally centers the element within its parent container. This is achieved by automatically distributing equal space on the left and right sides of the element, pushing it towards the center of the container.
+        left: 0;
+        right: 0;
+        bottom: 100px;
+        display: flex;//for making horizental the arrows
+        gap: 10px;//create gap between arrows
+        .icon{
+            width: 50px;
+            height: 50px;
+            border: 1px solid #999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+    }
+ }
